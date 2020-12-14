@@ -1,0 +1,12 @@
+/*
+ *= require bootstrap
+ *= require_tree .
+ *= require_self
+ */
+
+/*
+have some issue with @import "node_modules/bootstrap/scss/bootstrap" path:
+File to import not found or unreadable: node_modules/bootstrap/scss/bootstrap.
+just added few ../ to the beginning
+*/
+@import "../../../node_modules/bootstrap/scss/bootstrap";
