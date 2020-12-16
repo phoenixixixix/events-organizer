@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EventOrganizer</title>
+    <title>Event-Organizer</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,6 +11,38 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <%= link_to "Events!", root_path, class: 'navbar-brand' %>
+
+        <div class="collapse navbar-collapse">
+          <div class="navbar-nav">
+            <%= link_to "Link1", "/path1", class: 'nav-link nav-item active' %>
+            <%= link_to "Link2", "/path2", class: 'nav-link nav-item' %>
+            <%= link_to "Link3", "/path3", class: 'nav-link nav-item' %>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <% flash.each do |type, msg| %>
+            <div class="alert alert-info buffer-top">
+              <%= msg %>
+            </div>
+          <% end %>
+
+          <%= yield %>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; Company 2016</p>
+      </footer>
+
+    </div>
   </body>
 </html>
