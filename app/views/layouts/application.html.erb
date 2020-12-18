@@ -11,20 +11,23 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <%= link_to "Events!", root_path, class: 'navbar-brand' %>
 
-        <div class="collapse navbar-collapse">
-          <div class="navbar-nav">
-            <%= link_to "Link1", "/path1", class: 'nav-link nav-item active' %>
-            <%= link_to "Link2", "/path2", class: 'nav-link nav-item' %>
-            <%= link_to "Link3", "/path3", class: 'nav-link nav-item' %>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <% if user_signed_in? %>
+              <li class="nav-item"><%= link_to "Your profile", current_user, class: 'nav-link' %></li>
+              <li class="nav-item"><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'nav-link' %></li>
+            <% else %>
+              <li class="nav-item"><%= link_to "Sign in", new_user_session_path, class: 'nav-link' %></li>
+              <li class="nav-item"><%= link_to "Sign up", new_user_registration_path, class: 'border border-success rounded nav-link p-1 m-1' %></li>
+            <% end %>
+          </ul>
         </div>
       </div>
     </nav>
-
 
     <div class="container">
       <div class="row">
@@ -45,7 +48,6 @@
       <footer>
         <p>&copy; Company 2016</p>
       </footer>
-
     </div>
   </body>
 </html>
