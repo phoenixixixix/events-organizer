@@ -8,6 +8,7 @@ gem 'puma', '~> 4.1'
 gem 'uglifier', '~> 2.7', '>= 2.7.2'
 
 gem 'devise'
+gem 'devise-i18n'
 
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
