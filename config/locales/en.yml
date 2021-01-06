@@ -1,38 +1,69 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
+  controllers:
+    users:
+      updated: 'profile updated!'
+    events:
+      created: 'event successfully created!'
+      updated: 'event successfully updated!'
+      destroyed: 'event destroyed!'
+  devise:
+    registrations:
+      new:
+        title: 'Sign up'
+        btn_sign_up: 'Sign up'
+      edit:
+        title: 'Change password'
+        mapping_confirmable: 'Currently waiting confirmation for:'
+        blank_password_field: "leave blank if you don't want to change it"
+        characters_minimum: 'characters minimum'
+        current_password: 'we need your current password to confirm your changes'
+        btn_cancel_account: 'Cancel my account'
+        confirm: 'Are you sure?'
+        text:
+          cancel_account: 'Cancel my account'
+          unhappy: 'Unhappy?'
+    sessions:
+      new:
+        title: 'Log in'
+        btn_log_in: 'Log in'
+    shared:
+      links:
+        btn_log_in: 'Log in'
+        btn_sign_up: 'Sign up'
+        btn_forgot_password: 'Forgot your password?'
+        btn_receive_confirmation: "Didn't receive confirmation instructions?"
+        btn_receive_unlock: "Didn't receive unlock instructions?"
+  user:
+    profile:
+      edit: 'red. profile'
+      events_true: 'Organized:'
+      events_false: 'User has not organized any events at this time.'
+    profile_editing:
+      title: 'Profile editing'
+      btn_change_password: 'Change password'
+  event:
+    new:
+      title: 'New event'
+    index:
+      title: 'Events'
+      btn_create_event: 'Create event'
+    edit:
+      title: 'Event editing'
   app:
+    title: 'Events!'
     complany: 'My company name'
-
+    navigation:
+      your_profile: 'Your profile'
+      sign_out: 'sign_out'
+      sign_in: 'sign_in'
+      sign_up: 'sign_up'
   errors:
     one: 'In your form %{count} error'
     other: 'In your form %{count} errors'
+  buttons:
+    save: 'Save changes'
+    back: 'Back'
+    edit: 'Edit'
+    update: 'Update'
+  text:
+    or: 'or'

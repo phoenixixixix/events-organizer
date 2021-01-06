@@ -1,11 +1,11 @@
-<h1>Profile editing</h1>
+<h1><%= t('user.profile_editing.title') %></h1>
 
 <div class="row">
   <div class="col-md-6 buffer-top">
     <%= render 'form' %>
 
     <p class="buffer-top">
-      <%= link_to 'Change password', edit_user_registration_path %>
+      <%= link_to t('user.profile_editing.btn_change_password'), edit_user_registration_path %>
     </p>
   </div>
 </div>

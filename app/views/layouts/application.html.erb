@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Event-Organizer</title>
+    <title><%= t('app.title') %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,7 +13,7 @@
   <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <%= link_to "Events!", root_path, class: 'navbar-brand' %>
+        <%= link_to t('app.title'), root_path, class: 'navbar-brand' %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,11 +21,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <% if user_signed_in? %>
-              <li class="nav-item"><%= link_to "Your profile", current_user, class: 'nav-link' %></li>
-              <li class="nav-item"><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'nav-link' %></li>
+              <li class="nav-item"><%= link_to t('app.navigation.your_profile'), current_user, class: 'nav-link' %></li>
+              <li class="nav-item"><%= link_to t('app.navigation.sign_out'), destroy_user_session_path, method: :delete, class: 'nav-link' %></li>
             <% else %>
-              <li class="nav-item"><%= link_to "Sign in", new_user_session_path, class: 'nav-link' %></li>
-              <li class="nav-item"><%= link_to "Sign up", new_user_registration_path, class: 'border border-success rounded nav-link p-1 m-1' %></li>
+              <li class="nav-item"><%= link_to t('app.navigation.sign_in'), new_user_session_path, class: 'nav-link' %></li>
+              <li class="nav-item"><%= link_to t('app.navigation.sign_up'), new_user_registration_path, class: 'border border-success rounded nav-link p-1 m-1' %></li>
             <% end %>
           </ul>
         </div>
