@@ -32,3 +32,7 @@
 en:
   app:
     complany: 'My company name'
+
+  errors:
+    one: 'In your form %{count} error'
+    other: 'In your form %{count} errors'

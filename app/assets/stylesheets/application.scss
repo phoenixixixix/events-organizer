@@ -25,6 +25,15 @@ just added few ../ to the beginning
   margin-bottom: 20px;
 }
 
+.errors_list {
+  list-style-type: none;
+}
+
+.errors_list ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
 /* Avatars for users & events */
 .img-icon, .img-icon-small {
   height: 50px;
