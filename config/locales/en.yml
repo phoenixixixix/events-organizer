@@ -49,6 +49,8 @@ en:
       btn_create_event: 'Create event'
     edit:
       title: 'Event editing'
+    show:
+      delete_alert: 'warning before deleting this Event'
   app:
     title: 'Events!'
     complany: 'My company name'
@@ -65,5 +67,6 @@ en:
     back: 'Back'
     edit: 'Edit'
     update: 'Update'
+    delete: 'Delete'
   text:
     or: 'or'

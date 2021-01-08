@@ -15,6 +15,10 @@
           <% if current_user_can_edit?(@event) %>
             <div class="buffer-top">
               <%= link_to t('buttons.edit'), edit_event_path(@event), class: 'btn btn-primary' %>
+              <%= link_to t('buttons.delete'), event_path(@event),
+                          method: :delete,
+                          data: {confirm: t('event.show.delete_alert')},
+                          class: 'btn btn-outline-danger' %>
             </div>
           <% end %>
         </div>
