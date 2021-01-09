@@ -55,6 +55,9 @@ en:
       title: 'Event editing'
     show:
       delete_alert: 'warning before deleting this Event'
+  comments:
+    comment:
+      delete_alert: 'warning before deleting this Comment'
   app:
     title: 'Events!'
     complany: 'My company name'
