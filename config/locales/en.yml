@@ -6,6 +6,10 @@ en:
       created: 'event successfully created!'
       updated: 'event successfully updated!'
       destroyed: 'event destroyed!'
+    comments:
+      created: 'comment created!'
+      destroyed: 'comment deleted!'
+      error: 'something went wrong'
   devise:
     registrations:
       new:
