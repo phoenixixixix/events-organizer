@@ -89,6 +89,7 @@ en:
     other: 'In your form %{count} errors'
     methods:
       event_author_subscription: "event author can't subscribe"
+      email_uniqueness: "Email has already been taken"
   buttons:
     save: 'Save changes'
     back: 'Back'
