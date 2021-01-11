@@ -59,9 +59,17 @@ en:
       title: 'Event editing'
     show:
       delete_alert: 'warning before deleting this Event'
+      organizer: 'Organizer'
+      members: 'Members'
+      participate: 'Participate'
   comments:
     comment:
       delete_alert: 'warning before deleting this Comment'
+  subscriptions:
+    subscription:
+      delete_alert: 'warning before delete subscriber'
+    form:
+      btn_subscribe: 'Subscribe'
   app:
     title: 'Events!'
     complany: 'My company name'
