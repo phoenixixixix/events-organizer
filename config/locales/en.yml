@@ -87,6 +87,8 @@ en:
   errors:
     one: 'In your form %{count} error'
     other: 'In your form %{count} errors'
+    methods:
+      event_author_subscription: "event author can't subscribe"
   buttons:
     save: 'Save changes'
     back: 'Back'
