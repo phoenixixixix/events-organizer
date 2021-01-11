@@ -1,4 +1,8 @@
 en:
+  activerecord:
+    attributes:
+      comment:
+        body: 'Post comment'
   controllers:
     users:
       updated: 'profile updated!'
@@ -65,6 +69,8 @@ en:
   comments:
     comment:
       delete_alert: 'warning before deleting this Comment'
+    form:
+      btn_send: 'Send'
   subscriptions:
     subscription:
       delete_alert: 'warning before delete subscriber'
