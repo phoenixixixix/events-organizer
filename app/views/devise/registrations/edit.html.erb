@@ -1,7 +1,7 @@
 <h1><%= t('devise.registrations.edit.title') %></h1>
 
 <div class="row">
-  <div class="col-md-6 buffer-top">
+  <div class="col-md-6 mt-3">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= render "partials/form_errors", model: resource %>
 
