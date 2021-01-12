@@ -78,12 +78,12 @@ en:
       btn_subscribe: 'Subscribe'
   app:
     title: 'Events!'
-    complany: 'My company name'
+    company: 'My company name'
     navigation:
       your_profile: 'Your profile'
-      sign_out: 'sign_out'
-      sign_in: 'sign_in'
-      sign_up: 'sign_up'
+      sign_out: 'Sign out'
+      sign_in: 'Sign in'
+      sign_up: 'Sign up'
   errors:
     one: 'In your form %{count} error'
     other: 'In your form %{count} errors'
