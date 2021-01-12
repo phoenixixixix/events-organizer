@@ -1,5 +1,4 @@
 <h1><%= t('devise.sessions.new.title') %></h1>
-
 <div class="row">
   <div class="col-md-6 buffer-top">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -7,7 +6,7 @@
 
       <div class="form-group">
         <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, class: 'form-control'  %>
+        <%= f.email_field :email, autofocus: true, class: 'form-control' %>
       </div>
 
       <div class="form-group">

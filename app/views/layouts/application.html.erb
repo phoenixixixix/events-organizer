@@ -37,12 +37,21 @@
       <div class="row">
         <div class="col-lg-9">
           <% flash.each do |type, msg| %>
-            <div class="alert alert-info buffer-top">
-              <%= msg %>
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
+            <% if type == 'alert' %>
+              <div class="alert alert-danger buffer-top">
+                <%= msg %>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <% else %>
+              <div class="alert alert-info buffer-top">
+                <%= msg %>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <% end %>
           <% end %>
 
           <%= yield %>
