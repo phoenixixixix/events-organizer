@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mb-3">
       <div class="container">
         <%= link_to t('app.title'), root_path, class: 'navbar-brand' %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,13 +20,13 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-4">
             <% if user_signed_in? %>
               <li class="nav-item"><%= link_to t('app.navigation.your_profile'), current_user, class: 'nav-link' %></li>
               <li class="nav-item"><%= link_to t('app.navigation.sign_out'), destroy_user_session_path, method: :delete, class: 'nav-link' %></li>
             <% else %>
               <li class="nav-item"><%= link_to t('app.navigation.sign_in'), new_user_session_path, class: 'nav-link' %></li>
-              <li class="nav-item"><%= link_to t('app.navigation.sign_up'), new_user_registration_path, class: 'border border-success rounded nav-link p-1 m-1' %></li>
+              <li class="nav-item"><%= link_to t('app.navigation.sign_up'), new_user_registration_path, class: 'nav-link' %></li>
             <% end %>
           </ul>
         </div>
@@ -35,10 +35,10 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-12">
           <% flash.each do |type, msg| %>
             <% if type == 'alert' %>
-              <div class="alert alert-danger mt-3">
+              <div class="alert alert-danger">
                 <%= msg %>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>

@@ -91,7 +91,7 @@ en:
       event_author_subscription: "event author can't subscribe"
       email_uniqueness: "Email has already been taken"
   buttons:
-    save: 'Save changes'
+    save: 'Save'
     back: 'Back'
     edit: 'Edit'
     update: 'Update'

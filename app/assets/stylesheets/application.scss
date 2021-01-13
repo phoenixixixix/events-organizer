@@ -11,6 +11,15 @@ just added few ../ to the beginning
 */
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
+/* Font */
+body {
+  font-family: "Trebuchet MS";
+}
+
+h1, h2 {
+  margin-top: 20px;
+}
+
 /* Errors */
 .errors_list {
   list-style-type: none;
@@ -23,7 +32,7 @@ just added few ../ to the beginning
 
 /* Avatars for users & events */
 .img-icon, .img-icon-small {
-  height: 50px;
+  height: 35px;
   width: auto;
   border-radius: 50%;
 }
@@ -45,5 +54,5 @@ just added few ../ to the beginning
 }
 
 .thumbnail-inner {
-  padding: 20px 4px 4px;
+  padding: 20px 12px 12px;
 }
