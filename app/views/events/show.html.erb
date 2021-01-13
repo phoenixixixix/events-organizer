@@ -32,7 +32,7 @@
         <%= render partial: 'comments/form', locals: { comment: @new_comment || @event.comments.build } %>
 
         <div class="my-3">
-          <%= render partial: 'comments/comment', collection: @event.comments.except(@new_comment) %>
+          <%= render partial: 'comments/comment', collection: @event.comments.except(@new_comment).order(created_at: :desc) %>
         </div>
       </div>
     </div>
@@ -43,7 +43,7 @@
           <div class="col-lg-4">
             <h4><%= t('event.show.organizer') %>:</h4>
           </div>
-          <div class="col-lg-8">
+          <div class="col-lg-8 pt-lg-1">
             <p><%= render partial: 'users/user', object: @event.user %></p>
           </div>
         </div>
@@ -54,7 +54,7 @@
           <div class="col-lg-4">
             <h4><%= t('event.show.members') %>:</h4>
           </div>
-          <div class="col-lg-8">
+          <div class="col-lg-8 pt-lg-1">
             <%= render partial: 'subscriptions/subscription', collection: @event.subscriptions.except(@new_subscription) %>
           </div>
         </div>
