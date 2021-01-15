@@ -40,4 +40,7 @@
 yarn-debug.log*
 .yarn-integrity
 
+# Ignore local image uploads
+/public/uploads
+
 .idea
