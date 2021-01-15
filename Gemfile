@@ -16,6 +16,9 @@ gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'carrierwave', '~> 2.0'
+gem 'rmagick'
+
 group :production do
   gem 'pg', '~> 1.2', '>= 1.2.2'
 end
