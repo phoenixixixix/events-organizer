@@ -1,6 +1,8 @@
 en:
   activerecord:
     attributes:
+      user:
+        avatar: 'Profile image'
       comment:
         body: 'Post comment'
   controllers:

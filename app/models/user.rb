@@ -14,6 +14,8 @@ class User < ApplicationRecord
   # and update if any exist
   after_commit :link_subscriptions, on: :create
 
+  mount_uploader :avatar, AvatarUploader
+
   private
 
   def set_name
