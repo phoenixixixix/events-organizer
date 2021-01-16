@@ -20,6 +20,10 @@ en:
       created: 'subscription created!'
       destroyed: 'subscription deleted!'
       error: 'something went wrong'
+    photos:
+      created: 'photo added!'
+      destroyed: 'photo deleted!'
+      error: 'something went wrong'
   devise:
     registrations:
       new:
@@ -78,6 +82,12 @@ en:
       delete_alert: 'warning before delete subscriber'
     form:
       btn_subscribe: 'Subscribe'
+  photos:
+    form:
+      btn_upload: 'Upload'
+    photo:
+      text_add: 'Add'
+      delete_alert: 'warning before delete photo'
   app:
     title: 'Events!'
     company: 'My company name'

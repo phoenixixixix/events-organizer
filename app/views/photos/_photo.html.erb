@@ -1,0 +1,10 @@
+<div class="event-photo my-3">
+  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
+  <%= t('.text_add') %> <%= render partial: 'users/user', object: photo.user %>
+  <% if current_user_can_edit?(photo) %>
+    <%= link_to fa_icon('times'),
+                event_photo_path(photo.event, photo),
+                method: :delete,
+                data: { confirm: t('.delete_alert')} %>
+  <% end %>
+</div>
