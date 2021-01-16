@@ -18,6 +18,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'carrierwave', '~> 2.0'
 gem 'rmagick'
+gem 'fog-aws'
 
 group :production do
   gem 'pg', '~> 1.2', '>= 1.2.2'
