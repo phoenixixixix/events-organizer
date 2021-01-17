@@ -36,6 +36,12 @@
   color: #e0e0e0;
 }
 
+.event-address {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .event-info-inner {
   background:rgba(0, 0, 0, 0.4);
 }
