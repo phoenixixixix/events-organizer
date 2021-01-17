@@ -8,7 +8,7 @@
 
       <div class="event-info-inner row">
         <div class="col-md-6">
-          <div class="event-description">
+          <div class="event-description mx-3">
             <h1><%= @event.title %></h1>
             <h3><%= l @event.datetime, format: :short %></h3>
             <h3><small><%= link_to @event.address, "#" %></small></h3>
@@ -31,20 +31,22 @@
 
   <div class="row">
     <div class="col-md-8">
-      <div class="event-photos">
+      <div class="event-photos mb-5">
         <div class="event-photos-gallery">
           <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
         </div>
-        <div class="event-photo-form">
-          <%= render partial: 'photos/form', locals: { photo: @new_photo || @event.photos.build } %>
-        </div>
+        <% if current_user %>
+          <div class="event-photo-form">
+            <%= render partial: 'photos/form', locals: { photo: @new_photo || @event.photos.build } %>
+          </div>
+        <% end %>
       </div>
       <div class="event-comments mt-3">
-        <%= render partial: 'comments/form', locals: { comment: @new_comment || @event.comments.build } %>
-
         <div class="my-3">
           <%= render partial: 'comments/comment', collection: @event.comments.except(@new_comment).order(created_at: :desc) %>
         </div>
+
+        <%= render partial: 'comments/form', locals: { comment: @new_comment || @event.comments.build } %>
       </div>
     </div>
 

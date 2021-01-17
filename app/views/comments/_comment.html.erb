@@ -1,25 +1,27 @@
-<div class="bg-light rounded mb-3 px-1">
-  <p><%= comment.body %></p>
-  <p>
-    <span>
-      <% if comment.user.present? %>
-        <em><strong><%= render partial: 'users/user', object: comment.user %></strong></em>
-      <% else %>
-        <em><strong><%= comment.user_name %></strong></em>
+<div class="comments-collection">
+  <div class="comments-item  mb-3 px-3 py-2">
+    <p><%= comment.body %></p>
+    <p>
+      <span>
+        <% if comment.user.present? %>
+          <em><%= render partial: 'users/user', object: comment.user %></em>
+        <% else %>
+          <em><%= comment.user_name %></em>
+        <% end %>
+      </span>
+      <% if current_user_can_edit?(comment) %>
+        <%= link_to(
+                fa_icon('trash'), event_comment_path(comment.event, comment),
+                method: :delete, data: {confirm: t('.delete_alert')},
+                class: 'text-dark'
+            ) %>
       <% end %>
-    </span>
-    <% if current_user_can_edit?(comment) %>
-      <%= link_to(
-              fa_icon('trash'), event_comment_path(comment.event, comment),
-              method: :delete, data: {confirm: t('.delete_alert')},
-              class: 'text-dark'
-          ) %>
-    <% end %>
 
-    <em class="float-right">
-      <i class="fa fa-clock-o" aria-hidden="true"></i>
-      <%= l comment.created_at, format: :short %>
-    </em>
-  </p>
+      <em class="float-right">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <%= l comment.created_at, format: :short %>
+      </em>
+    </p>
+  </div>
 </div>
 
