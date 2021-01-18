@@ -1,10 +1,14 @@
 en:
+  # Active record default names
   activerecord:
+    # model attribute names
     attributes:
       user:
         avatar: 'Profile image'
       comment:
         body: 'Post comment'
+
+  # Controller messages
   controllers:
     users:
       updated: 'profile updated!'
@@ -24,6 +28,8 @@ en:
       created: 'photo added!'
       destroyed: 'photo deleted!'
       error: 'something went wrong'
+
+  # Devise messages
   devise:
     registrations:
       new:
@@ -51,19 +57,52 @@ en:
         btn_forgot_password: 'Forgot your password?'
         btn_receive_confirmation: "Didn't receive confirmation instructions?"
         btn_receive_unlock: "Didn't receive unlock instructions?"
-  user:
-    profile:
+
+  # App localization
+  app:
+    title: 'Events-Organizer!'
+    company: 'My company name'
+    navigation:
+      your_profile: 'Your profile'
+      sign_out: 'Sign out'
+      sign_in: 'Sign in'
+      sign_up: 'Sign up'
+
+  # Errors
+  errors:
+    one: 'In your form %{count} error'
+    other: 'In your form %{count} errors'
+    methods:
+      event_author_subscription: "event author can't subscribe"
+      email_uniqueness: "Email has already been taken"
+
+  # Default buttons
+  buttons:
+    save: 'Save'
+    back: 'Back'
+    edit: 'Edit'
+    update: 'Update'
+    delete: 'Delete'
+
+  # Text
+  text:
+    or: 'or'
+
+  # Models views
+  users:
+    show:
       edit: 'red. profile'
       events_true: 'Organized:'
       events_false: 'User has not organized any events at this time.'
-    profile_editing:
+    edit:
       title: 'Profile editing'
       btn_change_password: 'Change password'
-  event:
+
+  events:
     new:
       title: 'New event'
     index:
-      title: 'Events'
+      title: 'All events'
       btn_create_event: 'Create event'
     edit:
       title: 'Event editing'
@@ -71,42 +110,23 @@ en:
       delete_alert: 'warning before deleting this Event'
       organizer: 'Organizer'
       members: 'Members'
-      participate: 'Participate'
+      join: 'Join this event'
+
   comments:
     comment:
       delete_alert: 'warning before deleting this Comment'
     form:
       btn_send: 'Send'
+
   subscriptions:
     subscription:
       delete_alert: 'warning before delete subscriber'
     form:
       btn_subscribe: 'Subscribe'
+
   photos:
     form:
       btn_upload: 'Upload'
     photo:
       text_add: 'Add'
       delete_alert: 'warning before delete photo'
-  app:
-    title: 'Events!'
-    company: 'My company name'
-    navigation:
-      your_profile: 'Your profile'
-      sign_out: 'Sign out'
-      sign_in: 'Sign in'
-      sign_up: 'Sign up'
-  errors:
-    one: 'In your form %{count} error'
-    other: 'In your form %{count} errors'
-    methods:
-      event_author_subscription: "event author can't subscribe"
-      email_uniqueness: "Email has already been taken"
-  buttons:
-    save: 'Save'
-    back: 'Back'
-    edit: 'Edit'
-    update: 'Update'
-    delete: 'Delete'
-  text:
-    or: 'or'
